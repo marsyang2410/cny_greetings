@@ -1,4 +1,4 @@
-# 蛇年賀詞生成器 Chinese New Year Greetings Generator 🧧
+# 蛇年賀詞生成器 CNY Greetings Generator 🧧
 
 A simple and responsive web app to generate festive Chinese New Year greetings. Built with **Next.js**, **TypeScript**, and **Tailwind CSS**, and deployed on **Vercel**. Click a button to get a random greeting and share the joy of the season!
 

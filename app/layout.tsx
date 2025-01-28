@@ -1,8 +1,12 @@
 import type { Metadata } from "next"
-import { Noto_Sans_TC } from "next/font/google"
+import { Zen_Maru_Gothic } from "next/font/google"
 import "./globals.css"
 
-const notoSansTC = Noto_Sans_TC({ subsets: ["latin"] })
+// Specify the weight(s) you want to use
+const zenMaruGothic = Zen_Maru_Gothic({ 
+  subsets: ["latin"], 
+  weight: ["400"] // Adjust the weight as needed
+})
 
 export const metadata: Metadata = {
   title: "蛇年賀詞生成器",
@@ -15,9 +19,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="zh-Hant-TW" className={notoSansTC.className}>
+    <html lang="zh-Hant-TW" className={zenMaruGothic.className}>
       <body>{children}</body>
     </html>
   )
 }
-

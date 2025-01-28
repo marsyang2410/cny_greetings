@@ -6,6 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { categories } from "../utils/greetings"
 import { useToast } from "@/components/ui/use-toast"
 import { Toaster } from "@/components/ui/toaster"
+import { Analytics } from "@vercel/analytics/react"
 
 export default function SnakeYearGreeting() {
   const { greeting, generateGreeting, category, setCategory } = useGreeting()
@@ -31,7 +32,7 @@ export default function SnakeYearGreeting() {
           </Select>
         </div>
         <div
-          className="mb-8 h-32 flex items-center justify-center cursor-pointer hover:bg-accent rounded-lg transition-colors duration-200"
+          className="mb-4 h-32 flex items-center justify-center cursor-pointer hover:bg-accent rounded-lg transition-colors duration-200"
           onClick={() => {
             if (greeting) {
               navigator.clipboard.writeText(greeting)
@@ -48,6 +49,8 @@ export default function SnakeYearGreeting() {
             <p className="text-xl text-muted-foreground">點擊按鈕生成賀詞！</p>
           )}
         </div>
+        {/* Add the note here */}
+        <p className="text-sm text-muted-foreground mb-8">點擊生成的賀詞即可複製到剪貼簿。</p>
         <Button
           onClick={generateGreeting}
           className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105"
@@ -60,4 +63,3 @@ export default function SnakeYearGreeting() {
     </div>
   )
 }
-

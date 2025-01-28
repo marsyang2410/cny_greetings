@@ -7,6 +7,7 @@ import { categories } from "../utils/greetings"
 import { useToast } from "@/components/ui/use-toast"
 import { Toaster } from "@/components/ui/toaster"
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function SnakeYearGreeting() {
   const { greeting, generateGreeting, category, setCategory } = useGreeting()
@@ -58,6 +59,8 @@ export default function SnakeYearGreeting() {
           生成賀詞
         </Button>
       </main>
+      <Analytics />
+      <SpeedInsights />
       <Toaster />
       <footer className="mt-8 text-white text-sm">© 2024 蛇年賀詞生成器。版權所有。</footer>
     </div>
